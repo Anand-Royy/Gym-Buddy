@@ -8,7 +8,9 @@ const WorkoutSection = ({setLength}) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const resp = await fetch('http://localhost:5000/api/routines');
+        const resp = await fetch(
+          'https://gym-buddy-backend-one.vercel.app/api/routines'
+        );
         const { data } = await resp.json();
         console.log(data);
         setResponse(data);

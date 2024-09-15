@@ -19,7 +19,7 @@ const DisplayWorkout = () => {
     const fetchRoutine = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/routines/${id}`
+          `https://gym-buddy-backend-one.vercel.app/api/routines/${id}`
         );
         if (!response.ok) {
           throw new Error('Network response was not ok');

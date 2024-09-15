@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import DynamicFields from './DynamicFields';
 import { useNavigate } from 'react-router-dom';
+
 const CreateWorkout = ({ fields, setFields, length }) => {
   const [name, setName] = useState(''); // using name to set the value of the routine name (setWorkout)
 
@@ -35,13 +36,16 @@ const CreateWorkout = ({ fields, setFields, length }) => {
     console.log(data);
     setName('');
     try {
-      const res = await fetch('http://localhost:5000/api/routines', {
-        method: 'POST',
-        headers: {
-          'Content-type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
+      const res = await fetch(
+        'https://gym-buddy-backend-one.vercel.app/api/routines',
+        {
+          method: 'POST',
+          headers: {
+            'Content-type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        }
+      );
       if (res.ok) {
         console.log(res);
       } else {
