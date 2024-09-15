@@ -9,7 +9,7 @@ const WorkoutSection = ({setLength}) => {
     const fetchData = async () => {
       try {
         const resp = await fetch(
-          'https://gym-buddy-backend-one.vercel.app/api/routines'
+          'https://gym-buddy-backend-bt0ly32g7-anand-royys-projects.vercel.app/api/routines'
         );
         const { data } = await resp.json();
         console.log(data);
