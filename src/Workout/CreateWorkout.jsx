@@ -37,7 +37,7 @@ const CreateWorkout = ({ fields, setFields, length }) => {
     setName('');
     try {
       const res = await fetch(
-        'https://gym-buddy-backend-bt0ly32g7-anand-royys-projects.vercel.app/api/routines',
+        'https://gym-buddy-backend-2kzk.onrender.com/api/routines',
         {
           method: 'POST',
           headers: {
